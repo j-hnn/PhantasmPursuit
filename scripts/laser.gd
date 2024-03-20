@@ -8,7 +8,7 @@ func _ready():
 	await get_tree().create_timer(5).timeout
 	queue_free()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = transform.x * speed
 	move_and_slide()
 	

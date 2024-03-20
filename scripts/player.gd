@@ -42,15 +42,9 @@ func fire_laser():
 	get_parent().add_child(laser)
 	await get_tree().create_timer(fire_rate).timeout 
 	can_fire = true
-	laser.enemy_hit.connect(_on_enemy_hit)
 	
 func regen_energy():
 	can_regen = false
 	energy += 1
 	await get_tree().create_timer(regen_rate).timeout
 	can_regen = true
-	
-func _on_enemy_hit():
-	pass
-	#code when enemy hit
-	#collected += 1

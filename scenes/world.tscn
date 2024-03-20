@@ -40,3 +40,15 @@ layer_0/tile_data = PackedInt32Array(-720883, 1, 0, -720884, 1, 0, -720885, 1, 0
 
 [node name="player" parent="TileMap" instance=ExtResource("4_audh1")]
 position = Vector2(260, 671)
+
+[node name="Spawn1" type="Marker2D" parent="TileMap"]
+position = Vector2(544, 63)
+
+[node name="Spawn2" type="Marker2D" parent="TileMap"]
+position = Vector2(-369, 303)
+
+[node name="Spawn3" type="Marker2D" parent="TileMap"]
+position = Vector2(1521, 569)
+
+[node name="Spawn4" type="Marker2D" parent="TileMap"]
+position = Vector2(68, 830)
