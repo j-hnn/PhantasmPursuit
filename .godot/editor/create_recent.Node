@@ -1,8 +1,9 @@
 ProgressBar
 Label
+HBoxContainer
 ColorRect
-Camera2D
 CanvasLayer
+Camera2D
 Marker2D
 CollisionShape2D
 Sprite2D

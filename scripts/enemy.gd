@@ -3,6 +3,8 @@ class_name Phantom extends CharacterBody2D
 const speed = 200
 @export var player: Node2D
 
+signal player_hit
+
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 @onready var trail_marker = $Trailmarker
 
@@ -30,3 +32,4 @@ func _on_timer_timeout():
 func _on_hitbox_body_entered(body):
 	if body == player:
 		queue_free()
+		player_hit.emit()

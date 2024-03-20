@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal enemy_hit
+
 var speed = 500
 
 func _ready():
@@ -15,3 +17,4 @@ func _on_hithox_body_entered(body):
 		queue_free()
 		if body is Phantom:
 			body.queue_free()
+			enemy_hit.emit()

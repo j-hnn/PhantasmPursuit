@@ -1,12 +1,11 @@
 res://scenes/world.tscn
 res://scenes/player.tscn
 res://scenes/laser.tscn
-res://scripts/player.gd
-res://scripts/laser.gd
 res://scenes/enemy.tscn
-res://scripts/enemy.gd
 res://scenes/crumb_trail.tscn
-res://scripts/world.gd
-res://scripts/crumb_trail.gd
 res://scenes/player_gui.tscn
+res://scripts/enemy.gd
+res://scripts/laser.gd
+res://scripts/world.gd
+res://scripts/player.gd
 res://scripts/player_gui.gd

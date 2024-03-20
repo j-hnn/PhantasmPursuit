@@ -2,14 +2,13 @@ extends Node2D
 
 var can_spawn = true
 var spawn_delay = 5
+var collected = 0
+var switched = false
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if can_spawn:
 		can_spawn = false
@@ -25,3 +24,12 @@ func spawn_enemy():
 	enemy.player = $TileMap/player
 	enemy.global_position = Vector2(0, 0)
 	get_parent().add_child(enemy)
+	enemy.player_hit.connect(_on_player_hit)
+	
+func _on_player_hit():
+	print("player hit")
+	reset_player()
+	
+func reset_player():
+	collected = 0
+	switched = false
