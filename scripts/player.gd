@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
 
+signal collect_enough
+
 @onready var muzzle = $Muzzle
 @onready var collected_bar = $Camera2D/player_gui/BackgroundRect/CollectedRect/CollectedLabel/CollectedProgress
 @onready var energy_bar = $Camera2D/player_gui/BackgroundRect/EnergyRect/EnergyLabel/EnergyBar
@@ -12,7 +14,8 @@ var regen_rate = 1
 var can_fire = true
 var can_regen = true
 var energy = 100 
-
+var collected = 0
+var need_collect = 5
 
 func _ready():
 	energy_bar.value = energy
@@ -37,11 +40,17 @@ func fire_laser():
 	can_fire = false
 	energy -= 1
 	var laser = load("res://scenes/laser.tscn").instantiate()
+	laser.enemy_hit.connect(_on_enemy_hit)
 	laser.global_position = muzzle.global_position
 	laser.rotation = self.rotation
 	get_parent().add_child(laser)
 	await get_tree().create_timer(fire_rate).timeout 
 	can_fire = true
+	
+func _on_enemy_hit():
+	collected += 1
+	if collected == need_collect:
+		collect_enough.emit()
 	
 func regen_energy():
 	can_regen = false

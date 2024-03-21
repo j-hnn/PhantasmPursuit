@@ -5,3 +5,4 @@ res://scenes/laser.tscn
 res://scenes/enemy.tscn
 res://scripts/world.gd
 res://scripts/laser.gd
+res://scripts/enemy.gd

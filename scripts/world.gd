@@ -6,12 +6,15 @@ extends Node2D
 	$TileMap/Spawn3,
 	$TileMap/Spawn4
 	]
+@onready var player = $TileMap/player
 
 var can_spawn = true
 var spawn_delay = 2
-var collected = 0
 var switched = false
 var spawn_pos = Vector2(0, 0)
+
+func _ready():
+	player.collect_enough.connect(_on_player_collect_enough)
 
 func _process(_delta):
 	if can_spawn:
@@ -25,7 +28,7 @@ func _process(_delta):
 
 func spawn_enemy():
 	var enemy = load("res://scenes/enemy.tscn").instantiate()
-	enemy.player = $TileMap/player
+	enemy.player = player
 	get_spawn()
 	enemy.global_position = spawn_pos
 	get_parent().add_child(enemy)
@@ -38,5 +41,8 @@ func _on_player_hit():
 	reset_player()
 	
 func reset_player():
-	collected = 0
 	switched = false
+
+func _on_player_collect_enough():
+	print("win")
+	#when player collects enough
