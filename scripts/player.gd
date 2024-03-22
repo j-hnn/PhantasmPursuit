@@ -24,6 +24,7 @@ func _physics_process(_delta):
 	look_at(get_global_mouse_position())
 	velocity = dir * speed
 	move_and_slide()
+	collected_bar.value = collected * (100 / need_collect)
 	energy_bar.value = energy
 	
 	if Input.is_action_pressed("fire") and energy > 0 and can_fire:
