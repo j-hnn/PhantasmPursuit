@@ -37,6 +37,7 @@ func _process(_delta):
 		
 	if Input.is_action_pressed("flip") and player_inside:
 			print("flip switch")
+			flip_lever()
 			switched = true
 		
 	if switched:
@@ -63,6 +64,7 @@ func reset_player():
 	switched = false
 	can_switch = false
 	exit.visible = false
+	unflip_lever()
 
 func _on_player_collect_enough():
 	can_switch = true
@@ -83,6 +85,13 @@ func _on_exit_body_entered(body):
 		print("win")
 		#replace with code to win screen
 
+func flip_lever():
+	$TileMap/Lever/Sprite2D.visible = false
+	$TileMap/Lever/Sprite2D2.visible = true
+	
+func unflip_lever():
+	$TileMap/Lever/Sprite2D.visible = true
+	$TileMap/Lever/Sprite2D2.visible = false
 
 func _on_timer_timeout():
 	print("lose")

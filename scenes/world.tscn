@@ -68,6 +68,11 @@ shape = SubResource("CircleShape2D_mvb8g")
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("4_w7woo")
 
+[node name="Sprite2D2" type="Sprite2D" parent="TileMap/Lever"]
+visible = false
+scale = Vector2(-0.15, 0.15)
+texture = ExtResource("4_w7woo")
+
 [node name="Exit" type="Area2D" parent="TileMap"]
 visible = false
 position = Vector2(1385, 745)
