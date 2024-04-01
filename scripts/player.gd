@@ -5,6 +5,7 @@ signal collect_enough
 @onready var muzzle = $Muzzle
 @onready var collected_bar = $Camera2D/player_gui/BackgroundRect/CollectedRect/CollectedLabel/CollectedProgress
 @onready var energy_bar = $Camera2D/player_gui/BackgroundRect/EnergyRect/EnergyLabel/EnergyBar
+@onready var sprite = $AnimatedSprite2D
 
 @export var speed = 300
 
@@ -19,6 +20,7 @@ var need_collect = 5
 
 func _ready():
 	energy_bar.value = energy
+	sprite.play("default")
 
 func _physics_process(_delta):
 	look_at(get_global_mouse_position())

@@ -1,25 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1ml7303haypj"]
+[gd_scene load_steps=12 format=3 uid="uid://b1ml7303haypj"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7hs8f"]
-[ext_resource type="Texture2D" uid="uid://cghc6neln74uj" path="res://assets/icon.svg" id="2_ylgb3"]
+[ext_resource type="Texture2D" uid="uid://cobnnd4ym1qtd" path="res://assets/PlayerSprite (1).svg" id="2_oqr7n"]
+[ext_resource type="Texture2D" uid="uid://dcac80cc6qql1" path="res://assets/PlayerSprite (2).svg" id="3_cqcta"]
+[ext_resource type="Texture2D" uid="uid://cb0ymbmfr7qpw" path="res://assets/PlayerSprite (3).svg" id="4_07a66"]
+[ext_resource type="Texture2D" uid="uid://5jtsewws76rp" path="res://assets/PlayerSprite (4).svg" id="5_15ule"]
+[ext_resource type="Texture2D" uid="uid://cs64oov3kmspj" path="res://assets/PlayerSprite (5).svg" id="6_vv647"]
+[ext_resource type="Texture2D" uid="uid://dq4ksmm6mauwi" path="res://assets/PlayerSprite (6).svg" id="7_jdwwp"]
+[ext_resource type="Texture2D" uid="uid://c0dmwq1gyrocl" path="res://assets/PlayerSprite (7).svg" id="8_nulfs"]
+[ext_resource type="Texture2D" uid="uid://b61bl3x1ye67o" path="res://assets/PlayerSprite (8).svg" id="9_evt7j"]
+[ext_resource type="Texture2D" uid="uid://buw5mqrk83ig1" path="res://assets/PlayerSprite (9).svg" id="10_jjfk1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cuilx"]
-radius = 65.5134
+[sub_resource type="SpriteFrames" id="SpriteFrames_ou61x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oqr7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cqcta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_07a66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_15ule")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vv647")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jdwwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nulfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_evt7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jjfk1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 50.0
+}]
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_7hs8f")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_ylgb3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_ou61x")
+frame = 5
+frame_progress = 0.236531
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2(1.0026, 0.989713)
-shape = SubResource("CircleShape2D_cuilx")
+polygon = PackedVector2Array(-94.7536, -15.1559, -98.7433, -9.09355, -99.7407, 6.06236, -95.7511, 14.1455, -87.7718, 17.1767, -83.7822, 17.1767, -83.7822, 3.03118, -29.9222, 5.05197, -27.9274, 13.1351, -12.9663, 14.1455, -14.9611, 24.2495, -4.98703, 26.2702, 13.9637, 27.2806, 12.9663, 11.1143, 41.8911, 9.09355, 51.8652, 2.02079, 48.8729, -6.06236, 34.9092, -13.1351, 12.9663, -11.1143, 11.9689, -26.2702, -12.9663, -26.2702, -13.9637, -15.1559, -24.9352, -15.1559, -30.9196, -9.09355, -81.7874, -11.1143, -84.7796, -19.1975)
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(98, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 

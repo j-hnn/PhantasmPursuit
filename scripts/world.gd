@@ -42,13 +42,14 @@ func _process(_delta):
 		
 	if switched:
 		exit.visible = true
-		
+ 
 	if Input.is_action_pressed("spawn"):
 		spawn_enemy()
 
 func spawn_enemy():
 	var enemy = load("res://scenes/enemy.tscn").instantiate()
 	enemy.player = player
+	enemy.visible = false
 	get_spawn()
 	enemy.global_position = spawn_pos
 	get_parent().add_child(enemy)

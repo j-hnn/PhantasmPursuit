@@ -1,25 +1,40 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711380376
-README.md::TextFile::-1::1710777804::0::1::::<><>::
-::res://assets/::1711072269
-BreadCrumbsPlaceholder.png::CompressedTexture2D::3530212006647530502::1710782119::1710782121::1::::<><>::
-EnemyPlaceholder.jpg::CompressedTexture2D::4128176493605716905::1710778433::1710778442::1::::<><>::
-ExitPlaceholder.png::CompressedTexture2D::3335305109151668431::1711071440::1711071446::1::::<><>::
-FloorPlaceholder.png::CompressedTexture2D::5136580003452678259::1710778417::1710778441::1::::<><>::
-icon.svg::CompressedTexture2D::5208602556590623061::1710777557::1710777682::1::::<><>::
-LaserBeamPlaceholder.png::CompressedTexture2D::5234741902792053820::1710778905::1710778905::1::::<><>::
-LeverPlaceholder.png::CompressedTexture2D::7679885409821280055::1711045883::1711045899::1::::<><>::
-TimerBarPlaceholder.svg::CompressedTexture2D::7320415143655560472::1711072269::1711072269::1::::<><>::
-WallPlaceholder.png::CompressedTexture2D::2068659610691461982::1710778417::1710778439::1::::<><>::
-::res://scenes/::1711073555
-crumb_trail.tscn::PackedScene::5104409253734494317::1710966078::0::1::::<><>::uid://bqkcct3jsu5x7
-enemy.tscn::PackedScene::6537875390090812631::1711073514::0::1::::<><>::res://scripts/enemy.gd<>uid://by2yp1b41y3hl::::res://assets/EnemyPlaceholder.jpg
-laser.tscn::PackedScene::8814913903941589249::1711073514::0::1::::<><>::res://scripts/laser.gd<>uid://cgt0o1dbwiv4o::::res://assets/LaserBeamPlaceholder.png
-player.tscn::PackedScene::4236829694211537047::1711073514::0::1::::<><>::res://scripts/player.gd<>uid://cghc6neln74uj::::res://assets/icon.svg
-world.tscn::PackedScene::2614224817671422088::1711073555::0::1::::<><>::res://scripts/world.gd<>uid://cfggys4cxkh2b::::res://assets/FloorPlaceholder.png<>uid://4qcry6eh55cc::::res://assets/WallPlaceholder.png<>uid://b1ml7303haypj::::res://scenes/player.tscn<>uid://dhoguc2c2vret::::res://assets/LeverPlaceholder.png<>uid://bnrv8t7ujbdql::::res://assets/ExitPlaceholder.png<>uid://dckcfyc0n7iea::::res://assets/TimerBarPlaceholder.svg
-::res://scripts/::1711073512
-crumb_trail.gd::GDScript::-1::1710783238::0::1::::<>Area2D<>::
-enemy.gd::GDScript::-1::1710979325::0::1::::Phantom<>CharacterBody2D<>::
-laser.gd::GDScript::-1::1710979544::0::1::::<>CharacterBody2D<>::
-player.gd::GDScript::-1::1711070098::0::1::::Player<>CharacterBody2D<>::
-world.gd::GDScript::-1::1711073512::0::1::::<>Node2D<>::
+::res://::1711986422
+README.md::TextFile::-1::1711380480::0::1::::<><>::
+::res://assets/::1711987010
+BreadCrumbsPlaceholder.png::CompressedTexture2D::3530212006647530502::1711380480::1711380480::1::::<><>::
+EnemyPlaceholder.jpg::CompressedTexture2D::4128176493605716905::1711380480::1711380480::1::::<><>::
+ExitPlaceholder.png::CompressedTexture2D::3335305109151668431::1711380480::1711380480::1::::<><>::
+FloorPlaceholder.png::CompressedTexture2D::5136580003452678259::1711380480::1711380480::1::::<><>::
+icon.svg::CompressedTexture2D::5208602556590623061::1711380480::1711380480::1::::<><>::
+image-removebg-preview (14).png::CompressedTexture2D::7272204914806227650::1711468011::1711468011::1::::<><>::
+image-removebg-preview (16).png::CompressedTexture2D::4941583780444432776::1711555199::1711555199::1::::<><>::
+LaserBeamPlaceholder.png::CompressedTexture2D::5234741902792053820::1711380480::1711380480::1::::<><>::
+LeverPlaceholder.png::CompressedTexture2D::7679885409821280055::1711380480::1711380480::1::::<><>::
+pixil-frame-0.png::CompressedTexture2D::8424860450922914301::1711469530::1711469531::1::::<><>::
+PlayerSprite (1).svg::CompressedTexture2D::5758362295776348697::1711986410::1711986423::1::::<><>::
+PlayerSprite (2).svg::CompressedTexture2D::7299821419846069888::1711986430::1711986431::1::::<><>::
+PlayerSprite (3).svg::CompressedTexture2D::4896118363541157508::1711986441::1711986441::1::::<><>::
+PlayerSprite (4).svg::CompressedTexture2D::2125430721184385709::1711986445::1711986446::1::::<><>::
+PlayerSprite (5).svg::CompressedTexture2D::6102022826205377039::1711986451::1711986452::1::::<><>::
+PlayerSprite (6).svg::CompressedTexture2D::8342790468615920356::1711986457::1711986458::1::::<><>::
+PlayerSprite (7).svg::CompressedTexture2D::6534524363822182479::1711986463::1711986464::1::::<><>::
+PlayerSprite (8).svg::CompressedTexture2D::4616030526201272298::1711986468::1711986469::1::::<><>::
+PlayerSprite (9).svg::CompressedTexture2D::3837457673487757174::1711986476::1711986477::1::::<><>::
+sand.png::CompressedTexture2D::6751547797965028124::1711987010::1711987010::1::::<><>::
+TimerBarPlaceholder.svg::CompressedTexture2D::7320415143655560472::1711380480::1711380480::1::::<><>::
+Untitled drawing.svg::CompressedTexture2D::8772038679950119038::1711554777::1711554777::1::::<><>::
+WallPlaceholder.png::CompressedTexture2D::2068659610691461982::1711380480::1711380480::1::::<><>::
+::res://scenes/::1711986841
+crumb_trail.tscn::PackedScene::5104409253734494317::1711380480::0::1::::<><>::uid://bqkcct3jsu5x7
+enemy.tscn::PackedScene::6537875390090812631::1711986841::0::1::::<><>::res://scripts/enemy.gd<>uid://by2yp1b41y3hl::::res://assets/EnemyPlaceholder.jpg
+laser.tscn::PackedScene::8814913903941589249::1711986841::0::1::::<><>::res://scripts/laser.gd<>uid://cgt0o1dbwiv4o::::res://assets/LaserBeamPlaceholder.png
+player.tscn::PackedScene::4236829694211537047::1711986841::0::1::::<><>::res://scripts/player.gd<>uid://cobnnd4ym1qtd::::res://assets/PlayerSprite (1).svg<>uid://dcac80cc6qql1::::res://assets/PlayerSprite (2).svg<>uid://cb0ymbmfr7qpw::::res://assets/PlayerSprite (3).svg<>uid://5jtsewws76rp::::res://assets/PlayerSprite (4).svg<>uid://cs64oov3kmspj::::res://assets/PlayerSprite (5).svg<>uid://dq4ksmm6mauwi::::res://assets/PlayerSprite (6).svg<>uid://c0dmwq1gyrocl::::res://assets/PlayerSprite (7).svg<>uid://b61bl3x1ye67o::::res://assets/PlayerSprite (8).svg<>uid://buw5mqrk83ig1::::res://assets/PlayerSprite (9).svg
+start_screen.tscn::PackedScene::7574916831450107538::1711986841::0::1::::<><>::
+world.tscn::PackedScene::2614224817671422088::1711986841::0::1::::<><>::res://scripts/world.gd<>uid://cfggys4cxkh2b::::res://assets/FloorPlaceholder.png<>uid://4qcry6eh55cc::::res://assets/WallPlaceholder.png<>uid://b1ml7303haypj::::res://scenes/player.tscn<>uid://dhoguc2c2vret::::res://assets/LeverPlaceholder.png<>uid://bnrv8t7ujbdql::::res://assets/ExitPlaceholder.png<>uid://dckcfyc0n7iea::::res://assets/TimerBarPlaceholder.svg
+::res://scripts/::1711986604
+crumb_trail.gd::GDScript::-1::1711380480::0::1::::<>Area2D<>::
+enemy.gd::GDScript::-1::1711554480::0::1::::Phantom<>CharacterBody2D<>::
+laser.gd::GDScript::-1::1711380480::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1711986604::0::1::::Player<>CharacterBody2D<>::
+world.gd::GDScript::-1::1711554790::0::1::::<>Node2D<>::

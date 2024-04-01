@@ -1,11 +1,14 @@
+ColorRect
+CollisionPolygon2D
+AnimatedSprite2D
+CanvasLayer
+WorldEnvironment
 Sprite2D
 Timer
 Label
 TextureProgressBar
-CanvasLayer
 CollisionShape2D
 Area2D
-ColorRect
 CharacterBody2D
 Marker2D
 ProgressBar
