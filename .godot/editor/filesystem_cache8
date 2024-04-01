@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711986422
+::res://::1711987787
 README.md::TextFile::-1::1711380480::0::1::::<><>::
-::res://assets/::1711987010
+::res://assets/::1711987787
 BreadCrumbsPlaceholder.png::CompressedTexture2D::3530212006647530502::1711380480::1711380480::1::::<><>::
 EnemyPlaceholder.jpg::CompressedTexture2D::4128176493605716905::1711380480::1711380480::1::::<><>::
 ExitPlaceholder.png::CompressedTexture2D::3335305109151668431::1711380480::1711380480::1::::<><>::
@@ -21,17 +21,17 @@ PlayerSprite (6).svg::CompressedTexture2D::8342790468615920356::1711986457::1711
 PlayerSprite (7).svg::CompressedTexture2D::6534524363822182479::1711986463::1711986464::1::::<><>::
 PlayerSprite (8).svg::CompressedTexture2D::4616030526201272298::1711986468::1711986469::1::::<><>::
 PlayerSprite (9).svg::CompressedTexture2D::3837457673487757174::1711986476::1711986477::1::::<><>::
-sand.png::CompressedTexture2D::6751547797965028124::1711987010::1711987010::1::::<><>::
+sand.png::CompressedTexture2D::3392944876527045729::1711987782::1711987788::1::::<><>::
 TimerBarPlaceholder.svg::CompressedTexture2D::7320415143655560472::1711380480::1711380480::1::::<><>::
 Untitled drawing.svg::CompressedTexture2D::8772038679950119038::1711554777::1711554777::1::::<><>::
 WallPlaceholder.png::CompressedTexture2D::2068659610691461982::1711380480::1711380480::1::::<><>::
-::res://scenes/::1711986841
+::res://scenes/::1711987754
 crumb_trail.tscn::PackedScene::5104409253734494317::1711380480::0::1::::<><>::uid://bqkcct3jsu5x7
 enemy.tscn::PackedScene::6537875390090812631::1711986841::0::1::::<><>::res://scripts/enemy.gd<>uid://by2yp1b41y3hl::::res://assets/EnemyPlaceholder.jpg
 laser.tscn::PackedScene::8814913903941589249::1711986841::0::1::::<><>::res://scripts/laser.gd<>uid://cgt0o1dbwiv4o::::res://assets/LaserBeamPlaceholder.png
 player.tscn::PackedScene::4236829694211537047::1711986841::0::1::::<><>::res://scripts/player.gd<>uid://cobnnd4ym1qtd::::res://assets/PlayerSprite (1).svg<>uid://dcac80cc6qql1::::res://assets/PlayerSprite (2).svg<>uid://cb0ymbmfr7qpw::::res://assets/PlayerSprite (3).svg<>uid://5jtsewws76rp::::res://assets/PlayerSprite (4).svg<>uid://cs64oov3kmspj::::res://assets/PlayerSprite (5).svg<>uid://dq4ksmm6mauwi::::res://assets/PlayerSprite (6).svg<>uid://c0dmwq1gyrocl::::res://assets/PlayerSprite (7).svg<>uid://b61bl3x1ye67o::::res://assets/PlayerSprite (8).svg<>uid://buw5mqrk83ig1::::res://assets/PlayerSprite (9).svg
 start_screen.tscn::PackedScene::7574916831450107538::1711986841::0::1::::<><>::
-world.tscn::PackedScene::2614224817671422088::1711986841::0::1::::<><>::res://scripts/world.gd<>uid://cfggys4cxkh2b::::res://assets/FloorPlaceholder.png<>uid://4qcry6eh55cc::::res://assets/WallPlaceholder.png<>uid://b1ml7303haypj::::res://scenes/player.tscn<>uid://dhoguc2c2vret::::res://assets/LeverPlaceholder.png<>uid://bnrv8t7ujbdql::::res://assets/ExitPlaceholder.png<>uid://dckcfyc0n7iea::::res://assets/TimerBarPlaceholder.svg
+world.tscn::PackedScene::2614224817671422088::1711987754::0::1::::<><>::res://scripts/world.gd<>uid://cfggys4cxkh2b::::res://assets/FloorPlaceholder.png<>uid://4qcry6eh55cc::::res://assets/WallPlaceholder.png<>uid://b1ml7303haypj::::res://scenes/player.tscn<>uid://dhoguc2c2vret::::res://assets/LeverPlaceholder.png<>uid://bnrv8t7ujbdql::::res://assets/ExitPlaceholder.png<>uid://dckcfyc0n7iea::::res://assets/TimerBarPlaceholder.svg
 ::res://scripts/::1711986604
 crumb_trail.gd::GDScript::-1::1711380480::0::1::::<>Area2D<>::
 enemy.gd::GDScript::-1::1711554480::0::1::::Phantom<>CharacterBody2D<>::
