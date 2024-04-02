@@ -7,14 +7,18 @@ extends Node2D
 	$TileMap/Spawn4
 	]
 @onready var player = $TileMap/player
-@onready var lever_gui = $LeverGUI
+@onready var lever_gui = player.lever_rect
 @onready var exit = $TileMap/Exit
 @onready var timer = $Timer
 @onready var one_sec_timer = $TileMap/OneSecTimer
 @onready var timer_bar = $TimerGUI/TimerProgress
 @onready var timer_label = $TimerGUI/TimerLabel
+@onready var enemy_container = $TileMap/EnemyContainer
+@onready var color_shader = $ColorShader
+@onready var color_shader_2 = $ColorShader2
 
 var can_spawn = true
+var num_enemies = 0
 var time_left = 180
 var spawn_delay = 2
 var can_switch = false
@@ -26,10 +30,10 @@ func _ready():
 	timer_label.text = "Time Left: " + str(time_left) + " seconds"
 	timer_bar.value = time_left
 	player.collect_enough.connect(_on_player_collect_enough)
+	player.hit.connect(_on_enemy_hit)
 
 func _process(_delta):
-	
-	if can_spawn:
+	if can_spawn and num_enemies < 10:
 		can_spawn = false
 		spawn_enemy()
 		await get_tree().create_timer(spawn_delay).timeout
@@ -46,19 +50,24 @@ func _process(_delta):
 	if Input.is_action_pressed("spawn"):
 		spawn_enemy()
 
+func _on_enemy_hit():
+	num_enemies -= 1
+
 func spawn_enemy():
 	var enemy = load("res://scenes/enemy.tscn").instantiate()
 	enemy.player = player
-	enemy.visible = false
+	enemy.visible = true
 	get_spawn()
 	enemy.global_position = spawn_pos
-	get_parent().add_child(enemy)
+	get_node("TileMap/EnemyContainer").add_child(enemy)
 	enemy.player_hit.connect(_on_player_hit)
+	num_enemies += 1
 	
 func get_spawn():
 	spawn_pos = spawn[randi() % spawn.size()].global_position
 	
 func _on_player_hit():
+	num_enemies
 	reset_player()
 	
 func reset_player():
@@ -89,10 +98,15 @@ func _on_exit_body_entered(body):
 func flip_lever():
 	$TileMap/Lever/Sprite2D.visible = false
 	$TileMap/Lever/Sprite2D2.visible = true
+	color_shader.visible = false
+	color_shader_2.visible = true
 	
 func unflip_lever():
 	$TileMap/Lever/Sprite2D.visible = true
 	$TileMap/Lever/Sprite2D2.visible = false
+	color_shader.visible = true
+	color_shader_2.visible = false
+
 
 func _on_timer_timeout():
 	print("lose")

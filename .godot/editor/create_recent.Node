@@ -1,11 +1,12 @@
+Label
 ColorRect
+Node2D
 CollisionPolygon2D
 AnimatedSprite2D
 CanvasLayer
 WorldEnvironment
 Sprite2D
 Timer
-Label
 TextureProgressBar
 CollisionShape2D
 Area2D

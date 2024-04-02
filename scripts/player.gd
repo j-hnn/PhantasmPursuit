@@ -1,11 +1,13 @@
 class_name Player extends CharacterBody2D
 
 signal collect_enough
+signal hit
 
 @onready var muzzle = $Muzzle
 @onready var collected_bar = $Camera2D/player_gui/BackgroundRect/CollectedRect/CollectedLabel/CollectedProgress
 @onready var energy_bar = $Camera2D/player_gui/BackgroundRect/EnergyRect/EnergyLabel/EnergyBar
 @onready var sprite = $AnimatedSprite2D
+@onready var lever_rect = $Camera2D/player_gui/BackgroundRect/LeverRect
 
 @export var speed = 300
 
@@ -52,6 +54,7 @@ func fire_laser():
 	
 func _on_enemy_hit():
 	collected += 1
+	hit.emit()
 	if collected == need_collect:
 		collect_enough.emit()
 	
