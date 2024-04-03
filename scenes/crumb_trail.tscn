@@ -1,16 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceyu40dcik5t6"]
+[gd_scene load_steps=7 format=3 uid="uid://ceyu40dcik5t6"]
 
-[ext_resource type="Texture2D" uid="uid://bqkcct3jsu5x7" path="res://assets/BreadCrumbsPlaceholder.png" id="1_hhera"]
 [ext_resource type="Script" path="res://scripts/crumb_trail.gd" id="1_yg3uh"]
+[ext_resource type="Texture2D" uid="uid://s4s08cqt10al" path="res://assets/BreadCrumb.png" id="2_rikp4"]
+[ext_resource type="Texture2D" uid="uid://c47tmwoowbhne" path="res://assets/BreadCrumb (2).png" id="3_hglp0"]
+[ext_resource type="Texture2D" uid="uid://ok7sj3ey7djc" path="res://assets/BreadCrumb (3).png" id="4_t5bwf"]
+[ext_resource type="Texture2D" uid="uid://b5mt015d5372h" path="res://assets/BreadCrumb (4).png" id="5_ja53d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykcef"]
 
 [node name="crumb_trail" type="Area2D"]
 script = ExtResource("1_yg3uh")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Type1" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_hhera")
+texture = ExtResource("2_rikp4")
+
+[node name="Type2" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_hglp0")
+
+[node name="Type3" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_t5bwf")
+
+[node name="Type4" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ja53d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ykcef")

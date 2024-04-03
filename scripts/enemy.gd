@@ -1,6 +1,6 @@
 class_name Phantom extends CharacterBody2D
 
-const speed = 200
+const speed = 175
 @export var player: Node2D
 
 signal player_hit
