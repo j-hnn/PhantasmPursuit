@@ -128,7 +128,7 @@ offset_top = 22.0
 offset_right = 1405.0
 offset_bottom = 502.0
 scale = Vector2(0.360005, 0.360001)
-max_value = 180.0
+max_value = 60.0
 value = 33.0
 fill_mode = 5
 texture_under = ExtResource("7_3d3ga")
@@ -169,6 +169,23 @@ offset_top = -733.0
 offset_right = 3178.0
 offset_bottom = 2229.0
 color = Color(0.0352941, 0.878431, 0.0823529, 0.372549)
+
+[node name="Flash" type="CanvasLayer" parent="."]
+
+[node name="flash1" type="ColorRect" parent="Flash"]
+visible = false
+offset_left = -131.0
+offset_top = -74.0
+offset_right = 1344.0
+offset_bottom = 699.0
+color = Color(0, 0, 0, 1)
+
+[node name="flash2" type="ColorRect" parent="Flash"]
+visible = false
+offset_left = -89.0
+offset_top = -36.0
+offset_right = 1280.0
+offset_bottom = 703.0
 
 [connection signal="body_entered" from="TileMap/Lever" to="." method="_on_lever_body_entered"]
 [connection signal="body_exited" from="TileMap/Lever" to="." method="_on_lever_body_exited"]

@@ -1,11 +1,12 @@
+ColorRect
+CanvasLayer
+Button
 Label
 TextureRect
 Sprite2D
-ColorRect
 Node2D
 CollisionPolygon2D
 AnimatedSprite2D
-CanvasLayer
 WorldEnvironment
 Timer
 TextureProgressBar

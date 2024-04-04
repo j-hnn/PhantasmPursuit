@@ -113,6 +113,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="LeverRect" type="ColorRect" parent="Camera2D/player_gui/BackgroundRect"]
+visible = false
 layout_mode = 0
 offset_left = 427.0
 offset_top = 12.0

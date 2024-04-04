@@ -1,8 +1,51 @@
-[gd_scene format=3 uid="uid://df6l1kf3j2xxa"]
+[gd_scene load_steps=5 format=3 uid="uid://df6l1kf3j2xxa"]
+
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_0jjsp"]
+[ext_resource type="StyleBox" uid="uid://b8w6lfu8m1b0o" path="res://btnNormal.tres" id="1_j7741"]
+[ext_resource type="StyleBox" uid="uid://bw1lajyr6eanf" path="res://btnPress.tres" id="2_7yt84"]
+
+[sub_resource type="Theme" id="Theme_x6x1w"]
 
 [node name="StartScreen" type="CanvasLayer"]
+script = ExtResource("1_0jjsp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.121569, 0.290196, 0.556863, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 595.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 60
+text = "Phantasm Pursuit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="startBtn" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 455.0
+offset_right = 516.0
+offset_bottom = 575.0
+theme = SubResource("Theme_x6x1w")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("1_j7741")
+theme_override_styles/hover = ExtResource("2_7yt84")
+theme_override_styles/pressed = ExtResource("2_7yt84")
+text = "Start"
+
+[node name="quitBtn" type="Button" parent="."]
+offset_left = 631.0
+offset_top = 457.0
+offset_right = 1081.0
+offset_bottom = 577.0
+theme = SubResource("Theme_x6x1w")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("1_j7741")
+theme_override_styles/hover = ExtResource("2_7yt84")
+theme_override_styles/pressed = ExtResource("2_7yt84")
+text = "Quit"
+
+[connection signal="pressed" from="startBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="quitBtn" to="." method="_on_quit_btn_pressed"]

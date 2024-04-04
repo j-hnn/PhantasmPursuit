@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://q87wydibn378"]
+
+[ext_resource type="StyleBox" uid="uid://b8w6lfu8m1b0o" path="res://btnNormal.tres" id="1_mlooa"]
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_ttn73"]
+[ext_resource type="StyleBox" uid="uid://bw1lajyr6eanf" path="res://btnPress.tres" id="2_5x7oi"]
+
+[node name="win_screen" type="CanvasLayer"]
+script = ExtResource("1_ttn73")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.84, 16.32)
+color = Color(0.121569, 0.290196, 0.556863, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+offset_right = 71.0
+offset_bottom = 26.0
+scale = Vector2(0.279269, 0.355294)
+text = "You won!"
+
+[node name="replayBtn" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 402.0
+offset_right = 358.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("1_mlooa")
+theme_override_styles/hover = ExtResource("2_5x7oi")
+theme_override_styles/pressed = ExtResource("2_5x7oi")
+text = "Replay"
+
+[node name="quitBtn" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 398.0
+offset_right = 894.0
+offset_bottom = 539.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("1_mlooa")
+theme_override_styles/hover = ExtResource("2_5x7oi")
+theme_override_styles/pressed = ExtResource("2_5x7oi")
+text = "Quit"
+
+[connection signal="pressed" from="replayBtn" to="." method="_on_replay_btn_pressed"]
+[connection signal="pressed" from="quitBtn" to="." method="_on_replay_btn_pressed"]

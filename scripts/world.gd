@@ -16,10 +16,12 @@ extends Node2D
 @onready var enemy_container = $TileMap/EnemyContainer
 @onready var color_shader = $ColorShader
 @onready var color_shader_2 = $ColorShader2
+@onready var flash_1 = $Flash/flash1
+@onready var flash_2 = $Flash/flash2
 
 var can_spawn = true
 var num_enemies = 0
-var time_left = 180
+var time_left = 60
 var spawn_delay = 2
 var can_switch = false
 var player_inside = false
@@ -67,7 +69,8 @@ func get_spawn():
 	spawn_pos = spawn[randi() % spawn.size()].global_position
 	
 func _on_player_hit():
-	num_enemies
+	num_enemies = 0
+	flash()
 	reset_player()
 	
 func reset_player():
@@ -91,9 +94,7 @@ func _on_lever_body_exited(body):
 
 func _on_exit_body_entered(body):
 	if body is Player and switched:
-		get_tree().quit()
-		print("win")
-		#replace with code to win screen
+		get_tree().change_scene_to_file("res://scenes/win_screen.tscn")
 
 func flip_lever():
 	$TileMap/Lever/Sprite2D.visible = false
@@ -109,10 +110,22 @@ func unflip_lever():
 
 
 func _on_timer_timeout():
-	print("lose")
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
 
 func _on_one_sec_timer_timeout():
 	time_left -= 1
 	timer_label.text = "Time Left: " + str(time_left) + " seconds"
 	timer_bar.value = time_left
+
+func blacknwhite():
+	flash_1.visible = true
+	await get_tree().create_timer(.2).timeout 
+	flash_2.visible = true
+	flash_1.visible = false
+	await get_tree().create_timer(.2).timeout 
+	flash_2.visible = false
+
+func flash():
+	var random = randi_range(1, 5) * 100
+	for i in range(random):
+		blacknwhite()
