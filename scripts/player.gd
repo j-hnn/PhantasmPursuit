@@ -43,7 +43,7 @@ func _unhandled_input(_event):
 
 func fire_laser():
 	can_fire = false
-	energy -= 1
+	energy -= 2
 	var laser = load("res://scenes/laser.tscn").instantiate()
 	laser.enemy_hit.connect(_on_enemy_hit)
 	laser.global_position = muzzle.global_position

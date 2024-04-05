@@ -1,8 +1,8 @@
+TextureRect
 ColorRect
 CanvasLayer
 Button
 Label
-TextureRect
 Sprite2D
 Node2D
 CollisionPolygon2D
