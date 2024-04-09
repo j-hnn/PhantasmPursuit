@@ -27,11 +27,11 @@ var can_switch = false
 var player_inside = false
 var switched = false
 var spawn_pos = Vector2(0, 0)
+var collected = 0
 
 func _ready():
 	timer_label.text = "Time Left: " + str(time_left) + " seconds"
 	timer_bar.value = time_left
-	player.collect_enough.connect(_on_player_collect_enough)
 	player.hit.connect(_on_enemy_hit)
 
 func _process(_delta):
@@ -41,6 +41,14 @@ func _process(_delta):
 		await get_tree().create_timer(spawn_delay).timeout
 		can_spawn = true
 		
+	if time_left < 0:
+		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
+		
+	if collected >= 5:
+		can_switch = true
+	else:
+		can_switch = false
+		
 	if Input.is_action_pressed("flip") and player_inside:
 			print("flip switch")
 			flip_lever()
@@ -48,12 +56,10 @@ func _process(_delta):
 		
 	if switched:
 		exit.visible = true
- 
-	if Input.is_action_pressed("spawn"):
-		spawn_enemy()
-
+		
 func _on_enemy_hit():
 	num_enemies -= 1
+	collected += 1
 
 func spawn_enemy():
 	var enemy = load("res://scenes/enemy.tscn").instantiate()
@@ -74,6 +80,7 @@ func _on_player_hit():
 	reset_player()
 	
 func reset_player():
+	collected = 0
 	switched = false
 	can_switch = false
 	exit.visible = false
@@ -107,10 +114,6 @@ func unflip_lever():
 	$TileMap/Lever/Sprite2D2.visible = false
 	color_shader.visible = true
 	color_shader_2.visible = false
-
-
-func _on_timer_timeout():
-	get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
 
 func _on_one_sec_timer_timeout():
 	time_left -= 1

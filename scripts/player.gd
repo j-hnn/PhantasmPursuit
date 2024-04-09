@@ -1,6 +1,5 @@
 class_name Player extends CharacterBody2D
 
-signal collect_enough
 signal hit
 
 @onready var muzzle = $Muzzle
@@ -13,7 +12,7 @@ signal hit
 
 var dir : Vector2
 var fire_rate = 0.05
-var regen_rate = 1
+var regen_rate = 0.5
 var can_fire = true
 var can_regen = true
 var energy = 100 
@@ -43,7 +42,7 @@ func _unhandled_input(_event):
 
 func fire_laser():
 	can_fire = false
-	energy -= 2
+	energy -= 3
 	var laser = load("res://scenes/laser.tscn").instantiate()
 	laser.enemy_hit.connect(_on_enemy_hit)
 	laser.global_position = muzzle.global_position
@@ -55,8 +54,6 @@ func fire_laser():
 func _on_enemy_hit():
 	collected += 1
 	hit.emit()
-	if collected == need_collect:
-		collect_enough.emit()
 	
 func regen_energy():
 	can_regen = false

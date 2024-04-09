@@ -10,6 +10,7 @@ signal player_hit
 
 func _ready() -> void:
 	makepath()
+	modulate.a8 = 10
 	
 func _physics_process(_delta: float) -> void:
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()

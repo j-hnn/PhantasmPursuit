@@ -113,10 +113,6 @@ texture = ExtResource("6_4xkxr")
 [node name="player" parent="TileMap" instance=ExtResource("4_audh1")]
 position = Vector2(260, 671)
 
-[node name="Timer" type="Timer" parent="TileMap"]
-wait_time = 180.0
-autostart = true
-
 [node name="OneSecTimer" type="Timer" parent="TileMap"]
 autostart = true
 
@@ -190,5 +186,4 @@ offset_bottom = 703.0
 [connection signal="body_entered" from="TileMap/Lever" to="." method="_on_lever_body_entered"]
 [connection signal="body_exited" from="TileMap/Lever" to="." method="_on_lever_body_exited"]
 [connection signal="body_entered" from="TileMap/Exit" to="." method="_on_exit_body_entered"]
-[connection signal="timeout" from="TileMap/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TileMap/OneSecTimer" to="." method="_on_one_sec_timer_timeout"]
