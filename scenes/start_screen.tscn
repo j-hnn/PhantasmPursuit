@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://df6l1kf3j2xxa"]
+[gd_scene load_steps=7 format=3 uid="uid://df6l1kf3j2xxa"]
 
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_0jjsp"]
 [ext_resource type="StyleBox" uid="uid://b8w6lfu8m1b0o" path="res://btnNormal.tres" id="1_j7741"]
 [ext_resource type="StyleBox" uid="uid://bw1lajyr6eanf" path="res://btnPress.tres" id="2_7yt84"]
 [ext_resource type="Texture2D" uid="uid://dkyuqe8egok3b" path="res://assets/start_screen.svg" id="2_61alf"]
+[ext_resource type="AudioStream" uid="uid://6nnraueijork" path="res://audio/03. At Doom's Gate.mp3" id="5_y6r6r"]
 
 [sub_resource type="Theme" id="Theme_x6x1w"]
 
@@ -38,6 +39,9 @@ theme_override_styles/normal = ExtResource("1_j7741")
 theme_override_styles/hover = ExtResource("2_7yt84")
 theme_override_styles/pressed = ExtResource("2_7yt84")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_y6r6r")
 
 [connection signal="pressed" from="startBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="quitBtn" to="." method="_on_quit_btn_pressed"]
