@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1ml7303haypj"]
+[gd_scene load_steps=14 format=3 uid="uid://b1ml7303haypj"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7hs8f"]
 [ext_resource type="Texture2D" uid="uid://cobnnd4ym1qtd" path="res://assets/PlayerSprite (1).svg" id="2_oqr7n"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c0dmwq1gyrocl" path="res://assets/PlayerSprite (7).svg" id="8_nulfs"]
 [ext_resource type="Texture2D" uid="uid://b61bl3x1ye67o" path="res://assets/PlayerSprite (8).svg" id="9_evt7j"]
 [ext_resource type="Texture2D" uid="uid://buw5mqrk83ig1" path="res://assets/PlayerSprite (9).svg" id="10_jjfk1"]
+[ext_resource type="AudioStream" uid="uid://kh4vahvjavnm" path="res://audio/shootsound.mp3" id="11_v3fo3"]
+[ext_resource type="AudioStream" uid="uid://c26fqykm5uwvq" path="res://audio/enemydeathsound.mp3" id="12_y46f3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ou61x"]
 animations = [{
@@ -158,3 +160,9 @@ offset_left = -83.0
 offset_top = 34.0
 offset_right = 288.0
 offset_bottom = 62.0
+
+[node name="shootsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_v3fo3")
+
+[node name="enemysound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_y46f3")

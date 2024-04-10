@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://q87wydibn378"]
+[gd_scene load_steps=6 format=3 uid="uid://q87wydibn378"]
 
 [ext_resource type="StyleBox" uid="uid://b8w6lfu8m1b0o" path="res://btnNormal.tres" id="1_mlooa"]
 [ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_ttn73"]
 [ext_resource type="Texture2D" uid="uid://dsf6icjx1f7b0" path="res://assets/win_screen.svg" id="2_5fh08"]
 [ext_resource type="StyleBox" uid="uid://bw1lajyr6eanf" path="res://btnPress.tres" id="2_5x7oi"]
+[ext_resource type="AudioStream" uid="uid://glc33rdkmh2g" path="res://audio/winsound.mp3" id="5_rfvid"]
 
 [node name="win_screen" type="CanvasLayer"]
 script = ExtResource("1_ttn73")
@@ -34,6 +35,10 @@ theme_override_styles/normal = ExtResource("1_mlooa")
 theme_override_styles/hover = ExtResource("2_5x7oi")
 theme_override_styles/pressed = ExtResource("2_5x7oi")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_rfvid")
+autoplay = true
 
 [connection signal="pressed" from="replayBtn" to="." method="_on_replay_btn_pressed"]
 [connection signal="pressed" from="quitBtn" to="." method="_on_replay_btn_pressed"]

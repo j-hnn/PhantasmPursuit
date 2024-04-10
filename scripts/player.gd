@@ -7,6 +7,8 @@ signal hit
 @onready var energy_bar = $Camera2D/player_gui/BackgroundRect/EnergyRect/EnergyLabel/EnergyBar
 @onready var sprite = $AnimatedSprite2D
 @onready var lever_rect = $Camera2D/player_gui/BackgroundRect/LeverRect
+@onready var shootsound = $shootsound
+@onready var enemysound = $enemysound
 
 @export var speed = 300
 
@@ -43,6 +45,7 @@ func _unhandled_input(_event):
 func fire_laser():
 	can_fire = false
 	energy -= 3
+	shootsound.play()
 	var laser = load("res://scenes/laser.tscn").instantiate()
 	laser.enemy_hit.connect(_on_enemy_hit)
 	laser.global_position = muzzle.global_position
@@ -53,10 +56,11 @@ func fire_laser():
 	
 func _on_enemy_hit():
 	collected += 1
+	enemysound.play()
 	hit.emit()
 	
 func regen_energy():
 	can_regen = false
-	energy += 1
+	energy += 3
 	await get_tree().create_timer(regen_rate).timeout
 	can_regen = true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cga1e1n8mtgq1"]
+[gd_scene load_steps=6 format=3 uid="uid://cga1e1n8mtgq1"]
 
 [ext_resource type="Script" path="res://scripts/lose_screen.gd" id="1_bauu8"]
 [ext_resource type="Texture2D" uid="uid://1f10gi2mah5n" path="res://assets/lose_screen (1).svg" id="2_vsc0o"]
 [ext_resource type="StyleBox" uid="uid://b8w6lfu8m1b0o" path="res://btnNormal.tres" id="3_5ldjs"]
 [ext_resource type="StyleBox" uid="uid://bw1lajyr6eanf" path="res://btnPress.tres" id="4_xo701"]
+[ext_resource type="AudioStream" uid="uid://bym8kf06kxqpy" path="res://audio/losesound.mp3" id="5_wu48i"]
 
 [node name="lose_screen" type="CanvasLayer"]
 script = ExtResource("1_bauu8")
@@ -35,6 +36,9 @@ theme_override_styles/normal = ExtResource("3_5ldjs")
 theme_override_styles/hover = ExtResource("4_xo701")
 theme_override_styles/pressed = ExtResource("4_xo701")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_wu48i")
 
 [connection signal="pressed" from="replayBtn" to="." method="_on_replay_btn_pressed"]
 [connection signal="pressed" from="quitBtn" to="." method="_on_quit_btn_pressed"]

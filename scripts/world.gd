@@ -18,6 +18,8 @@ extends Node2D
 @onready var color_shader_2 = $ColorShader2
 @onready var flash_1 = $Flash/flash1
 @onready var flash_2 = $Flash/flash2
+@onready var diesound = $diesound
+@onready var leversound = $leversound
 
 var can_spawn = true
 var num_enemies = 0
@@ -75,6 +77,7 @@ func get_spawn():
 	spawn_pos = spawn[randi() % spawn.size()].global_position
 	
 func _on_player_hit():
+	diesound.play()
 	num_enemies = 0
 	flash()
 	reset_player()
@@ -108,6 +111,7 @@ func flip_lever():
 	$TileMap/Lever/Sprite2D2.visible = true
 	color_shader.visible = false
 	color_shader_2.visible = true
+	leversound.play()
 	
 func unflip_lever():
 	$TileMap/Lever/Sprite2D.visible = true

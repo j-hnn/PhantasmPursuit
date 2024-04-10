@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bdil5vlg3x22o"]
+[gd_scene load_steps=21 format=3 uid="uid://bdil5vlg3x22o"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_8f52c"]
 [ext_resource type="Texture2D" uid="uid://cfggys4cxkh2b" path="res://assets/FloorPlaceholder.png" id="2_0nhuw"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dhoguc2c2vret" path="res://assets/LeverPlaceholder.png" id="4_w7woo"]
 [ext_resource type="Texture2D" uid="uid://bnrv8t7ujbdql" path="res://assets/ExitPlaceholder.png" id="6_4xkxr"]
 [ext_resource type="Texture2D" uid="uid://dckcfyc0n7iea" path="res://assets/TimerBarPlaceholder.svg" id="7_3d3ga"]
+[ext_resource type="AudioStream" uid="uid://bxlvl4vx7c4gw" path="res://audio/deathsound.mp3" id="10_paeee"]
+[ext_resource type="AudioStream" uid="uid://buv3v170l35tv" path="res://audio/leverflipsound.mp3" id="11_1607o"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1h83e"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -182,6 +184,12 @@ offset_left = -89.0
 offset_top = -36.0
 offset_right = 1280.0
 offset_bottom = 703.0
+
+[node name="diesound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_paeee")
+
+[node name="leversound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_1607o")
 
 [connection signal="body_entered" from="TileMap/Lever" to="." method="_on_lever_body_entered"]
 [connection signal="body_exited" from="TileMap/Lever" to="." method="_on_lever_body_exited"]
