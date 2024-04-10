@@ -39,28 +39,29 @@ Untitled_drawing__3_-removebg-preview.png::CompressedTexture2D::3962489949844978
 WallPlaceholder.png::CompressedTexture2D::2068659610691461982::1711380480::1711380480::1::::<><>::
 water.png::CompressedTexture2D::1741189859517930076::1712071647::1712071647::1::::<><>::
 win_screen.svg::CompressedTexture2D::8434879758491117603::1712677369::1712677369::1::::<><>::
-::res://audio/::1712764548
+::res://audio/::1712765485
+02. Rip & Tear.mp3::AudioStreamMP3::4705087982849804949::1712765485::1712765485::1::::<><>::
 deathsound.mp3::AudioStreamMP3::4024768499949489798::1712763291::1712763292::1::::<><>::
 enemydeathsound.mp3::AudioStreamMP3::6732269290249815218::1712764548::1712764548::1::::<><>::
 leverflipsound.mp3::AudioStreamMP3::3835288482951034051::1712764029::1712764029::1::::<><>::
 losesound.mp3::AudioStreamMP3::4097747285414583502::1712764270::1712764276::1::::<><>::
 shootsound.mp3::AudioStreamMP3::718137386900799114::1712763291::1712763292::1::::<><>::
 winsound.mp3::AudioStreamMP3::444014150403351256::1712763291::1712763572::1::::<><>::
-::res://scenes/::1712764306
+::res://scenes/::1712764591
 crumb_trail.tscn::PackedScene::5104409253734494317::1712160413::0::1::::<><>::res://scripts/crumb_trail.gd<>uid://s4s08cqt10al
-enemy.tscn::PackedScene::6537875390090812631::1712764306::0::1::::<><>::res://scripts/enemy.gd<>uid://dbuyfgipxy1jy::::res://assets/image-removebg-preview (14).png
-laser.tscn::PackedScene::8814913903941589249::1712764306::0::1::::<><>::res://scripts/laser.gd<>uid://cwnc0eo2pw5xf::::res://assets/image-removebg-preview (17).png
-lose_screen.tscn::PackedScene::5195561601407664522::1712764306::0::1::::<><>::res://scripts/lose_screen.gd<>uid://1f10gi2mah5n::::res://assets/lose_screen (1).svg<>uid://b8w6lfu8m1b0o::::res://btnNormal.tres<>uid://bw1lajyr6eanf::::res://btnPress.tres<>uid://bym8kf06kxqpy::::res://audio/losesound.mp3
-player.tscn::PackedScene::4236829694211537047::1712764306::0::1::::<><>::res://scripts/player.gd<>uid://cobnnd4ym1qtd::::res://assets/PlayerSprite (1).svg<>uid://dcac80cc6qql1::::res://assets/PlayerSprite (2).svg<>uid://cb0ymbmfr7qpw::::res://assets/PlayerSprite (3).svg<>uid://5jtsewws76rp::::res://assets/PlayerSprite (4).svg<>uid://cs64oov3kmspj::::res://assets/PlayerSprite (5).svg<>uid://dq4ksmm6mauwi::::res://assets/PlayerSprite (6).svg<>uid://c0dmwq1gyrocl::::res://assets/PlayerSprite (7).svg<>uid://b61bl3x1ye67o::::res://assets/PlayerSprite (8).svg<>uid://buw5mqrk83ig1::::res://assets/PlayerSprite (9).svg<>uid://kh4vahvjavnm::::res://audio/shootsound.mp3
-start_screen.tscn::PackedScene::7574916831450107538::1712764306::0::1::::<><>::res://scripts/start_screen.gd<>uid://b8w6lfu8m1b0o::::res://btnNormal.tres<>uid://bw1lajyr6eanf::::res://btnPress.tres<>uid://dkyuqe8egok3b::::res://assets/start_screen.svg
-win_screen.tscn::PackedScene::1193129460887106185::1712764306::0::1::::<><>::uid://b8w6lfu8m1b0o::::res://btnNormal.tres<>res://scripts/win_screen.gd<>uid://dsf6icjx1f7b0::::res://assets/win_screen.svg<>uid://bw1lajyr6eanf::::res://btnPress.tres<>uid://glc33rdkmh2g::::res://audio/winsound.mp3
-world.tscn::PackedScene::2614224817671422088::1712764305::0::1::::<><>::res://scripts/world.gd<>uid://cfggys4cxkh2b::::res://assets/FloorPlaceholder.png<>uid://4qcry6eh55cc::::res://assets/WallPlaceholder.png<>uid://y2pe33tfdtce::::res://assets/water.png<>uid://b1ml7303haypj::::res://scenes/player.tscn<>uid://boltkog1vc1vp::::res://assets/sand.png<>uid://dhoguc2c2vret::::res://assets/LeverPlaceholder.png<>uid://bnrv8t7ujbdql::::res://assets/ExitPlaceholder.png<>uid://dckcfyc0n7iea::::res://assets/TimerBarPlaceholder.svg<>uid://bxlvl4vx7c4gw::::res://audio/deathsound.mp3<>uid://buv3v170l35tv::::res://audio/leverflipsound.mp3
-::res://scripts/::1712764303
+enemy.tscn::PackedScene::6537875390090812631::1712764591::0::1::::<><>::res://scripts/enemy.gd<>uid://dbuyfgipxy1jy::::res://assets/image-removebg-preview (14).png
+laser.tscn::PackedScene::8814913903941589249::1712764591::0::1::::<><>::res://scripts/laser.gd<>uid://cwnc0eo2pw5xf::::res://assets/image-removebg-preview (17).png
+lose_screen.tscn::PackedScene::5195561601407664522::1712764591::0::1::::<><>::res://scripts/lose_screen.gd<>uid://1f10gi2mah5n::::res://assets/lose_screen (1).svg<>uid://b8w6lfu8m1b0o::::res://btnNormal.tres<>uid://bw1lajyr6eanf::::res://btnPress.tres<>uid://bym8kf06kxqpy::::res://audio/losesound.mp3
+player.tscn::PackedScene::4236829694211537047::1712764591::0::1::::<><>::res://scripts/player.gd<>uid://cobnnd4ym1qtd::::res://assets/PlayerSprite (1).svg<>uid://dcac80cc6qql1::::res://assets/PlayerSprite (2).svg<>uid://cb0ymbmfr7qpw::::res://assets/PlayerSprite (3).svg<>uid://5jtsewws76rp::::res://assets/PlayerSprite (4).svg<>uid://cs64oov3kmspj::::res://assets/PlayerSprite (5).svg<>uid://dq4ksmm6mauwi::::res://assets/PlayerSprite (6).svg<>uid://c0dmwq1gyrocl::::res://assets/PlayerSprite (7).svg<>uid://b61bl3x1ye67o::::res://assets/PlayerSprite (8).svg<>uid://buw5mqrk83ig1::::res://assets/PlayerSprite (9).svg<>uid://kh4vahvjavnm::::res://audio/shootsound.mp3<>uid://c26fqykm5uwvq::::res://audio/enemydeathsound.mp3
+start_screen.tscn::PackedScene::7574916831450107538::1712764591::0::1::::<><>::res://scripts/start_screen.gd<>uid://b8w6lfu8m1b0o::::res://btnNormal.tres<>uid://bw1lajyr6eanf::::res://btnPress.tres<>uid://dkyuqe8egok3b::::res://assets/start_screen.svg
+win_screen.tscn::PackedScene::1193129460887106185::1712764591::0::1::::<><>::uid://b8w6lfu8m1b0o::::res://btnNormal.tres<>res://scripts/win_screen.gd<>uid://dsf6icjx1f7b0::::res://assets/win_screen.svg<>uid://bw1lajyr6eanf::::res://btnPress.tres<>uid://glc33rdkmh2g::::res://audio/winsound.mp3
+world.tscn::PackedScene::2614224817671422088::1712764591::0::1::::<><>::res://scripts/world.gd<>uid://cfggys4cxkh2b::::res://assets/FloorPlaceholder.png<>uid://4qcry6eh55cc::::res://assets/WallPlaceholder.png<>uid://y2pe33tfdtce::::res://assets/water.png<>uid://b1ml7303haypj::::res://scenes/player.tscn<>uid://boltkog1vc1vp::::res://assets/sand.png<>uid://dhoguc2c2vret::::res://assets/LeverPlaceholder.png<>uid://bnrv8t7ujbdql::::res://assets/ExitPlaceholder.png<>uid://dckcfyc0n7iea::::res://assets/TimerBarPlaceholder.svg<>uid://bxlvl4vx7c4gw::::res://audio/deathsound.mp3<>uid://buv3v170l35tv::::res://audio/leverflipsound.mp3
+::res://scripts/::1712764590
 crumb_trail.gd::GDScript::-1::1712159899::0::1::::<>Area2D<>::
 enemy.gd::GDScript::-1::1712678709::0::1::::Phantom<>CharacterBody2D<>::
 laser.gd::GDScript::-1::1711380480::0::1::::<>CharacterBody2D<>::
 lose_screen.gd::GDScript::-1::1712764303::0::1::::<>CanvasLayer<>::
-player.gd::GDScript::-1::1712763650::0::1::::Player<>CharacterBody2D<>::
+player.gd::GDScript::-1::1712764590::0::1::::Player<>CharacterBody2D<>::
 start_screen.gd::GDScript::-1::1712245731::0::1::::<>CanvasLayer<>::
 win_screen.gd::GDScript::-1::1712763551::0::1::::<>CanvasLayer<>::
 world.gd::GDScript::-1::1712764073::0::1::::<>Node2D<>::

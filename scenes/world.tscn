@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bdil5vlg3x22o"]
+[gd_scene load_steps=22 format=3 uid="uid://bdil5vlg3x22o"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_8f52c"]
 [ext_resource type="Texture2D" uid="uid://cfggys4cxkh2b" path="res://assets/FloorPlaceholder.png" id="2_0nhuw"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dckcfyc0n7iea" path="res://assets/TimerBarPlaceholder.svg" id="7_3d3ga"]
 [ext_resource type="AudioStream" uid="uid://bxlvl4vx7c4gw" path="res://audio/deathsound.mp3" id="10_paeee"]
 [ext_resource type="AudioStream" uid="uid://buv3v170l35tv" path="res://audio/leverflipsound.mp3" id="11_1607o"]
+[ext_resource type="AudioStream" uid="uid://b8bgd2crmtmk0" path="res://audio/02. Rip & Tear.mp3" id="12_u2eu4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1h83e"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -190,6 +191,9 @@ stream = ExtResource("10_paeee")
 
 [node name="leversound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_1607o")
+
+[node name="gamesound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_u2eu4")
 
 [connection signal="body_entered" from="TileMap/Lever" to="." method="_on_lever_body_entered"]
 [connection signal="body_exited" from="TileMap/Lever" to="." method="_on_lever_body_exited"]

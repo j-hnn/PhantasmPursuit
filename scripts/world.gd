@@ -20,6 +20,7 @@ extends Node2D
 @onready var flash_2 = $Flash/flash2
 @onready var diesound = $diesound
 @onready var leversound = $leversound
+@onready var gamesound = $gamesound
 
 var can_spawn = true
 var num_enemies = 0
@@ -35,6 +36,7 @@ func _ready():
 	timer_label.text = "Time Left: " + str(time_left) + " seconds"
 	timer_bar.value = time_left
 	player.hit.connect(_on_enemy_hit)
+	gamesound.play()
 
 func _process(_delta):
 	if can_spawn and num_enemies < 10:
