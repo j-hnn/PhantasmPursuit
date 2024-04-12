@@ -1,9 +1,8 @@
-res://scenes/start_screen.tscn
-res://btnNormal.tres
-res://scripts/start_screen.gd
 res://scenes/world.tscn
+res://btnNormal.tres
 res://scenes/player.tscn
 res://scenes/laser.tscn
 res://scenes/enemy.tscn
+res://scenes/start_screen.tscn
 res://scenes/win_screen.tscn
 res://scenes/lose_screen.tscn
