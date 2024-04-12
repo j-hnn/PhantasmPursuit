@@ -194,6 +194,8 @@ stream = ExtResource("11_1607o")
 
 [node name="gamesound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_u2eu4")
+volume_db = -10.0
+max_distance = 500000.0
 
 [connection signal="body_entered" from="TileMap/Lever" to="." method="_on_lever_body_entered"]
 [connection signal="body_exited" from="TileMap/Lever" to="." method="_on_lever_body_exited"]

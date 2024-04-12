@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0e838p3ybghj"]
+[gd_scene load_steps=6 format=3 uid="uid://c0e838p3ybghj"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_8d2cd"]
 [ext_resource type="Texture2D" uid="uid://dbuyfgipxy1jy" path="res://assets/image-removebg-preview (14).png" id="2_oihi2"]
+[ext_resource type="AudioStream" uid="uid://t3p4y1fmm3qy" path="res://audio/enemysound.mp3" id="3_5c28v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r1ujr"]
 radius = 57.0
@@ -32,6 +33,10 @@ autostart = true
 
 [node name="Trailmarker" type="Marker2D" parent="."]
 position = Vector2(0, 60)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5c28v")
+volume_db = 15.0
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -6,3 +6,5 @@ res://scenes/enemy.tscn
 res://scenes/start_screen.tscn
 res://scenes/win_screen.tscn
 res://scenes/lose_screen.tscn
+res://scripts/world.gd
+res://scripts/enemy.gd

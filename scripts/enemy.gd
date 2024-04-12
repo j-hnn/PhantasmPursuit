@@ -7,6 +7,9 @@ signal player_hit
 
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 @onready var trail_marker = $Trailmarker
+@onready var sound = $AudioStreamPlayer2D
+
+var can_play = false
 
 func _ready() -> void:
 	makepath()
@@ -28,7 +31,7 @@ func create_crumb_trail():
 func _on_timer_timeout():
 	makepath()
 	create_crumb_trail()
-
+	sound.play()
 
 func _on_hitbox_body_entered(body):
 	if body == player:
