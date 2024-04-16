@@ -41,4 +41,4 @@ stream = ExtResource("5_rfvid")
 autoplay = true
 
 [connection signal="pressed" from="replayBtn" to="." method="_on_replay_btn_pressed"]
-[connection signal="pressed" from="quitBtn" to="." method="_on_replay_btn_pressed"]
+[connection signal="pressed" from="quitBtn" to="." method="_on_quit_btn_pressed"]

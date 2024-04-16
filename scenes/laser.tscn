@@ -7,7 +7,7 @@
 size = Vector2(60, 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k727b"]
-radius = 2.0
+radius = 5.0
 height = 60.0
 
 [node name="laser" type="CharacterBody2D"]

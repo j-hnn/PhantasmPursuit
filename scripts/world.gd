@@ -9,7 +9,6 @@ extends Node2D
 @onready var player = $TileMap/player
 @onready var lever_gui = player.lever_rect
 @onready var exit = $TileMap/Exit
-@onready var timer = $Timer
 @onready var one_sec_timer = $TileMap/OneSecTimer
 @onready var timer_bar = $TimerGUI/TimerProgress
 @onready var timer_label = $TimerGUI/TimerLabel
@@ -135,6 +134,7 @@ func blacknwhite():
 	flash_2.visible = false
 
 func flash():
-	var random = randi_range(1, 5) * 100
+	var random = randi_range(5, 10) * 1000
 	for i in range(random):
 		blacknwhite()
+		print(i)
